@@ -1,8 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Constants */
-#define TERMINAL "ume"
-#define TERMCLASS "Ume"
+/* #define TERMINAL "ume" */
+/* #define TERMCLASS "Ume" */
+#define TERMINAL "st"
+#define TERMCLASS "St"
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
@@ -186,7 +188,8 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
 	/* { MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_c,		spawn,		SHCMD("emacsclient -nc -a='' --eval '(org-capture)'") },
+	/* { MODKEY,			XK_c,		spawn,		SHCMD("emacsclient -nc -a='' --eval '(org-capture)'") }, */
+	{ MODKEY,			XK_c,		spawn,		SHCMD(TERMINAL " -e ipython") },
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
